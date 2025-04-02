@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Encuesta</title>
+    <style>
+       body {
+    background-image: url('tigres.jpg'); 
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    text-align: center;
+    color: #dae910;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+    </style>
+</head>
+<body><center>
+    <h2>Encuesta de Opinion</h2>
+    <form action="conexion.php" method="POST">
+        <p>Es usted mayor de edad
+            <input type="radio" name="mayor_edad" value="Si" required> Si
+            <input type="radio" name="mayor_edad" value="No"> No
+        </p>
+        
+        <p>Que le parece el sabor de nuestro producto
+            <select name="sabor">
+                <option value="Malo">Malo</option>
+                <option value="Regular">Regular</option>
+                <option value="Bien">Bien</option>
+                <option value="Muy bien">Muy bien</option>
+                <option value="Excelente">Excelente</option>
+            </select>
+        </p>
+
+        <p>Como considera la calidad de nuestro producto
+            <select name="calidad">
+                <option value="Malo">Malo</option>
+                <option value="Regular">Regular</option>
+                <option value="Bien">Bien</option>
+                <option value="Muy bien">Muy bien</option>
+                <option value="Excelente">Excelente</option>
+            </select>
+        </p>
+
+        <p>Es adecuado el formato de la presentacion de nuestro producto
+            <select name="presentacion">
+                <option value="Malo">Malo</option>
+                <option value="Regular">Regular</option>
+                <option value="Bien">Bien</option>
+                <option value="Muy bien">Muy bien</option>
+                <option value="Excelente">Excelente</option>
+            </select>
+        </p>
+
+        <p>Recomendarias nuestro producto
+            <input type="radio" name="recomendacion" value="Si" required> Si
+            <input type="radio" name="recomendacion" value="No"> No
+        </p>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+</body></center>
+</html>
